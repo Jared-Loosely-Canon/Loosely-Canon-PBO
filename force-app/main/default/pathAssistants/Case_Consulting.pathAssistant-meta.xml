@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PathAssistant xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <entityName>Case</entityName>
+    <fieldName>Status</fieldName>
+    <masterLabel>Case Consulting</masterLabel>
+    <pathAssistantSteps>
+        <fieldNames>AccountId</fieldNames>
+        <fieldNames>Summary__c</fieldNames>
+        <info>&lt;ol&gt;&lt;li&gt;Ensure an Account is Listed&lt;/li&gt;&lt;li&gt;Update the summary with any applicable changes&lt;/li&gt;&lt;/ol&gt;</info>
+        <picklistValueName>Backlog</picklistValueName>
+    </pathAssistantSteps>
+    <recordTypeName>Consulting</recordTypeName>
+</PathAssistant>
