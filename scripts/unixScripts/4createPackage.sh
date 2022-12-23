@@ -1,0 +1,1 @@
+sfdx force:package:create -n canonConnectTemp -d "A Temporary Package" -t Unlocked -r force-app

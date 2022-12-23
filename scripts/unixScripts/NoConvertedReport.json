@@ -1,0 +1,329 @@
+{
+    "attributes": {
+        "describeUrl": "/services/data/v55.0/analytics/reports/00O0R0000026g1aUAA/describe",
+        "instancesUrl": "/services/data/v55.0/analytics/reports/00O0R0000026g1aUAA/instances",
+        "reportId": "00O0R0000026g1aUAA",
+        "reportName": "All Leads Report",
+        "type": "Report"
+    },
+    "allData": true,
+    "factMap": {
+        "T!T": {
+            "aggregates": [
+                {
+                    "label": "1",
+                    "value": 1
+                }
+            ],
+            "rows": [
+                {
+                    "dataCells": [
+                        {
+                            "label": "Jared",
+                            "recordId": "00Q0R00000Cbf0KUAR",
+                            "value": "00Q0R00000Cbf0KUAR"
+                        },
+                        {
+                            "label": "Phone",
+                            "recordId": "00Q0R00000Cbf0KUAR",
+                            "value": "00Q0R00000Cbf0KUAR"
+                        },
+                        {
+                            "label": "-",
+                            "recordId": "00Q0R00000Cbf0KUAR",
+                            "value": null
+                        },
+                        {
+                            "label": "Loosely Canon LLC",
+                            "recordId": "00Q0R00000Cbf0KUAR",
+                            "value": "00Q0R00000Cbf0KUAR"
+                        },
+                        {
+                            "label": "-",
+                            "recordId": "00Q0R00000Cbf0KUAR",
+                            "value": null
+                        },
+                        {
+                            "label": "-",
+                            "recordId": "00Q0R00000Cbf0KUAR",
+                            "value": null
+                        },
+                        {
+                            "escapedLabel": "-",
+                            "label": "-",
+                            "recordId": "00Q0R00000Cbf0KUAR",
+                            "value": null
+                        },
+                        {
+                            "label": "-",
+                            "recordId": "00Q0R00000Cbf0KUAR",
+                            "value": null
+                        },
+                        {
+                            "label": "User User",
+                            "value": "0050R00000E92KQQAZ"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "groupingsAcross": {
+        "groupings": []
+    },
+    "groupingsDown": {
+        "groupings": []
+    },
+    "hasDetailRows": true,
+    "picklistColors": {},
+    "reportExtendedMetadata": {
+        "aggregateColumnInfo": {
+            "RowCount": {
+                "dataType": "int",
+                "label": "Record Count"
+            }
+        },
+        "availableDashboardSettings": null,
+        "detailColumnInfo": {
+            "FIRST_NAME": {
+                "dataType": "string",
+                "entityColumnName": "Lead.Name",
+                "fieldInfo": {
+                    "entityName": "Lead",
+                    "fieldName": "FirstName",
+                    "lookupEntityName": "Lead"
+                },
+                "filterValues": [],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.FirstName",
+                "inactiveFilterValues": [],
+                "isLookup": true,
+                "label": "First Name",
+                "uniqueCountable": true
+            },
+            "LAST_NAME": {
+                "dataType": "string",
+                "entityColumnName": "Lead.Name",
+                "fieldInfo": {
+                    "entityName": "Lead",
+                    "fieldName": "LastName",
+                    "lookupEntityName": "Lead"
+                },
+                "filterValues": [],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.LastName",
+                "inactiveFilterValues": [],
+                "isLookup": true,
+                "label": "Last Name",
+                "uniqueCountable": true
+            },
+            "TITLE": {
+                "dataType": "string",
+                "entityColumnName": "Lead.Title",
+                "fieldInfo": {
+                    "entityName": "Lead",
+                    "fieldName": "Title"
+                },
+                "filterValues": [],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.Title",
+                "inactiveFilterValues": [],
+                "isLookup": false,
+                "label": "Title",
+                "uniqueCountable": true
+            },
+            "COMPANY": {
+                "dataType": "string",
+                "entityColumnName": "Lead.Company",
+                "fieldInfo": {
+                    "entityName": "Lead",
+                    "fieldName": "Company",
+                    "lookupEntityName": "Lead"
+                },
+                "filterValues": [],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.Company",
+                "inactiveFilterValues": [],
+                "isLookup": true,
+                "label": "Company / Account",
+                "uniqueCountable": true
+            },
+            "EMAIL": {
+                "dataType": "email",
+                "entityColumnName": "Lead.Email",
+                "fieldInfo": {
+                    "entityName": "Lead",
+                    "fieldName": "Email"
+                },
+                "filterValues": [],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.Email",
+                "inactiveFilterValues": [],
+                "isLookup": false,
+                "label": "Email",
+                "uniqueCountable": true
+            },
+            "LEAD_SOURCE": {
+                "dataType": "picklist",
+                "entityColumnName": "Lead.LeadSource",
+                "fieldInfo": {
+                    "entityName": "Lead",
+                    "fieldName": "LeadSource"
+                },
+                "filterValues": [
+                    {
+                        "apiName": "Web",
+                        "label": "Web",
+                        "name": "Web"
+                    },
+                    {
+                        "apiName": "Phone Inquiry",
+                        "label": "Phone Inquiry",
+                        "name": "Phone Inquiry"
+                    },
+                    {
+                        "apiName": "Partner Referral",
+                        "label": "Partner Referral",
+                        "name": "Partner Referral"
+                    },
+                    {
+                        "apiName": "Purchased List",
+                        "label": "Purchased List",
+                        "name": "Purchased List"
+                    },
+                    {
+                        "apiName": "Other",
+                        "label": "Other",
+                        "name": "Other"
+                    }
+                ],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.LeadSource",
+                "inactiveFilterValues": [],
+                "isLookup": false,
+                "label": "Lead Source",
+                "uniqueCountable": true
+            },
+            "STREET": {
+                "dataType": "string",
+                "entityColumnName": "Lead.Address",
+                "fieldInfo": {
+                    "entityName": "Lead",
+                    "fieldName": "Street"
+                },
+                "filterValues": [],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.Street",
+                "inactiveFilterValues": [],
+                "isLookup": false,
+                "label": "Street",
+                "uniqueCountable": true
+            },
+            "RATING": {
+                "dataType": "picklist",
+                "entityColumnName": "Lead.Rating",
+                "fieldInfo": {
+                    "entityName": "Lead",
+                    "fieldName": "Rating"
+                },
+                "filterValues": [
+                    {
+                        "apiName": "Hot",
+                        "label": "Hot",
+                        "name": "Hot"
+                    },
+                    {
+                        "apiName": "Warm",
+                        "label": "Warm",
+                        "name": "Warm"
+                    },
+                    {
+                        "apiName": "Cold",
+                        "label": "Cold",
+                        "name": "Cold"
+                    }
+                ],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.Rating",
+                "inactiveFilterValues": [],
+                "isLookup": false,
+                "label": "Rating",
+                "uniqueCountable": true
+            },
+            "OWNER": {
+                "dataType": "string",
+                "entityColumnName": "Owner.Name",
+                "filterValues": [],
+                "filterable": true,
+                "fullyQualifiedName": "Lead.Owner.Name",
+                "inactiveFilterValues": [],
+                "isLookup": true,
+                "label": "Lead Owner",
+                "uniqueCountable": true
+            }
+        },
+        "groupingColumnInfo": {}
+    },
+    "reportMetadata": {
+        "aggregates": [
+            "RowCount"
+        ],
+        "chart": null,
+        "crossFilters": [],
+        "currency": null,
+        "dashboardSetting": null,
+        "description": null,
+        "detailColumns": [
+            "FIRST_NAME",
+            "LAST_NAME",
+            "TITLE",
+            "COMPANY",
+            "EMAIL",
+            "LEAD_SOURCE",
+            "STREET",
+            "RATING",
+            "OWNER"
+        ],
+        "developerName": "All_Leads_Report_P8X",
+        "division": null,
+        "folderId": "00l0R000001XrccQAC",
+        "groupingsAcross": [],
+        "groupingsDown": [],
+        "hasDetailRows": true,
+        "hasRecordCount": true,
+        "historicalSnapshotDates": [],
+        "id": "00O0R0000026g1aUAA",
+        "name": "All Leads Report",
+        "presentationOptions": {
+            "hasStackedSummaries": true
+        },
+        "reportBooleanFilter": null,
+        "reportFilters": [
+            {
+                "column": "CONVERTED",
+                "filterType": "fieldValue",
+                "isRunPageEditable": true,
+                "operator": "equals",
+                "value": "False"
+            }
+        ],
+        "reportFormat": "TABULAR",
+        "reportType": {
+            "label": "Leads",
+            "type": "LeadList"
+        },
+        "scope": "org",
+        "showGrandTotal": true,
+        "showSubtotals": true,
+        "sortBy": [],
+        "standardDateFilter": {
+            "column": "CREATED_DATE",
+            "durationValue": "CUSTOM",
+            "endDate": null,
+            "startDate": null
+        },
+        "standardFilters": null,
+        "supportsRoleHierarchy": false,
+        "userOrHierarchyFilterId": null
+    }
+}

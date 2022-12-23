@@ -1,0 +1,1 @@
+sfdx force:package:version:create --package canonUtilities --path force-app --installationkey aCanonUtility --wait 10 --targetdevhubusername jaredsimpson@looselycanon.com --codecoverage

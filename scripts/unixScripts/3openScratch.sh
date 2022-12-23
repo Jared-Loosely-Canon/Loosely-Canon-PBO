@@ -1,0 +1,1 @@
+sfdx force:org:open -u test-ogydppfubi1i@example.com

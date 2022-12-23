@@ -1,0 +1,1 @@
+SELECT Id, Next_Cadence_Template__c, Email_Template_List__c, Task_Template_List__c, Text_Template_List__c FROM Cadence_Template__c WHERE Id = 'a01DH0000091BMtYAM';

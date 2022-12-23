@@ -1,0 +1,1 @@
+sfdx force:package:version:promote --package "canonUtilities@1.0.1-1"

@@ -1,0 +1,1 @@
+sfdx force:source:pull -u test-ogydppfubi1i@example.com
