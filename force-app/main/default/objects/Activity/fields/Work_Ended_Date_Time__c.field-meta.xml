@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Work_Ended_Date_Time__c</fullName>
+    <description>When the task last exited the working status</description>
+    <externalId>false</externalId>
+    <inlineHelpText>When the task last exited the working status</inlineHelpText>
+    <label>Work Ended Date Time</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>

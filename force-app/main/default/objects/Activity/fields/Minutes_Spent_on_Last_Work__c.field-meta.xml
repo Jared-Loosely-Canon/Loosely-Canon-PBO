@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Minutes_Spent_on_Last_Work__c</fullName>
+    <description>Minutes spent on the last working session of this task</description>
+    <externalId>false</externalId>
+    <formula>IF(((Work_Ended_Date_Time__c - Work_Started_Date_Time__c) * 24 * 60) &gt; 0, (Work_Ended_Date_Time__c - Work_Started_Date_Time__c) * 24 * 60, 0)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>Minutes spent on the last working session of this task</inlineHelpText>
+    <label>Minutes Spent on Last Work</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>
