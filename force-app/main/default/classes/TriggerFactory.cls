@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Jared Simpson
  * @group             : 
- * @last modified on  : 02-02-2023
+ * @last modified on  : 02-09-2023
  * @last modified by  : Jared Simpson
 **/
 public abstract class TriggerFactory {
@@ -22,7 +22,10 @@ public abstract class TriggerFactory {
 
     public static void run(String className) {
         TriggerFactory instance = newTriggerInstance(className);
-        // TriggerFactory instance = newTriggerInstance();
+        Boolean canonBypass = canon_app.TriggerHelper.bypassTriggerCheck();
+        if(canonBypass){
+            return;
+        }
 
         if (Trigger.isBefore && Trigger.isInsert) {
             instance.beforeInsert();
