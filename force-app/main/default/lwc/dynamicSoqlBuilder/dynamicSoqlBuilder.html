@@ -1,0 +1,41 @@
+<!--
+  @description       : 
+  @author            : Jared Simpson
+  @group             : 
+  @last modified on  : 01-30-2023
+  @last modified by  : Jared Simpson
+-->
+<template>
+    <lightning-card title="Dynamic SOQL Query Builder">
+      <div class="slds-m-around_medium">
+        <template for:each={fields} for:item="field">
+            <div key={field.id}>
+                <lightning-combobox
+                name={field.name}
+                label="Select Field"
+                options={options}
+                value={field.value}
+                onchange={handleFieldSelection}
+              ></lightning-combobox>
+              <lightning-button-icon
+                icon-name="utility:delete"
+                variant="border-filled"
+                onclick={removeField}
+              ></lightning-button-icon>
+            </div>
+        </template>
+        <lightning-button label="Add Field" onclick={addField}></lightning-button>
+        <br />
+        <br />
+        <lightning-button label="Generate Query" onclick={generateQuery}></lightning-button>
+        <br />
+        <br />
+        <lightning-textarea
+          name="query"
+          label="Generated Query"
+          value={query}
+          readonly
+        ></lightning-textarea>
+      </div>
+    </lightning-card>
+</template>
