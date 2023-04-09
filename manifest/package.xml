@@ -1,16 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
 	<types>
-		<members>LeadServiceTest</members>
-		<members>LeadTriggerHandler</members>
-		<members>TriggerFactory</members>
-		<members>TriggerFactoryTest</members>
-		<members>TriggerHandler</members>
-		<name>ApexClass</name>
-	</types>
-	<types>
-		<members>LeadTrigger</members>
-		<name>ApexTrigger</name>
+		<members>Leads/Converted_Leads_This_Month_gCC</members>
+		<members>Leads/Converted_Leads_This_Month_psL</members>
+		<members>Leads/Converted_Leads_This_Week_8Lu</members>
+		<members>Leads/Converted_to_Worked_Leads_This_Week_GAd</members>
+		<members>Leads/Created_Converted_Leads_This_Month_kcR</members>
+		<members>Leads/LeadSourceandStatus</members>
+		<members>Leads/Lead_Status_Changes_This_Month_9KK</members>
+		<members>Leads/Lead_Status_Changes_This_Week_2Zs</members>
+		<members>Leads/Leads_Created_This_Month_Nxa</members>
+		<members>Leads/Leads_Created_This_Week_Ime</members>
+		<members>Leads/My_Converted_Leads_Bku</members>
+		<members>Leads/My_Lead_Created_This_Week_dNQ</members>
+		<members>Leads/My_Lead_Status_Changes_This_Week_fb3</members>
+		<members>Leads/My_Lead_Status_Changes_This_Week_n8S</members>
+		<members>Leads/My_New_Leads_This_Week_VJf</members>
+		<members>Leads/New_Leads_Report_C0L</members>
+		<name>Report</name>
 	</types>
 	<version>55.0</version>
 </Package>
