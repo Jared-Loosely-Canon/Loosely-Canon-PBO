@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>ConnectPhoneController</members>
+        <members>ConnectPhoneControllerTest</members>
+        <members>EventTriggerHandler</members>
+        <members>EventTriggerHandlerTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>EventTrigger</members>
+        <name>ApexTrigger</name>
+    </types>
+    <types>
+        <members>Activity.Start_Date_Time_Readable__c</members>
+        <members>Activity.Start_Time_Readable__c</members>
+        <members>Contact.Last_Call_Result__c</members>
+        <members>Contact.Last_Connected_Call_Date_Time__c</members>
+        <members>Contact.Last_Contacted_Date__c</members>
+        <members>Contact.Last_Inbound_Text_Date_Time__c</members>
+        <members>Lead.First_Contacted_Date_Time__c</members>
+        <members>Lead.Last_Call_Result__c</members>
+        <members>Lead.Last_Connected_Call_Date_Time__c</members>
+        <members>Lead.Last_Contacted_Date__c</members>
+        <members>Lead.Last_Inbound_Text_Date_Time__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Lead-Lead Layout</members>
+        <members>PersonAccount-Person Account Layout</members>
+        <members>canon_app__Scheduled_Text__c-canon_app__Scheduled Text Layout</members>
+        <members>canon_app__Text_Message__c-canon_app__Text Message Layout</members>
+        <members>Event-Event Layout</members>
+        <members>Task-Task Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>Read Only</members>
+        <members>System Administrator %28non-API user%29</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Case.Canon_Connect</members>
+        <name>RecordType</name>
+    </types>
+    <types>
+        <members>Call_After_Create_Notification</members>
+        <members>Call_After_Insert_Lead_Made_Contact</members>
+        <members>Call_After_Upsert_Complete_Tasks</members>
+        <members>Event_After_Create_Update_Reminders</members>
+        <members>Lead_After_Insert_New_Lead</members>
+        <members>Lead_After_Insert_Notification</members>
+        <members>Lead_After_Status_Change_Cadence_Updates</members>
+        <members>Lead_Before_Update_Uncontacted_or_Contacted</members>
+        <members>Text_After_Create_Notification</members>
+        <members>Text_After_Insert_Inbound_Lead</members>
+        <members>Text_Before_Create_Assign_to_Queue</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Loosely_Canon_UtilityBar</members>
+        <members>Scheduled_Text_Record_Page1</members>
+        <members>Lead_Record_Page_Canon</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>canon_app__Canon_Connect_Merge_Object.Event</members>
+        <members>canon_app__Canon_Connect_Setting.canon_app__Connect</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Case.Canon Connect</members>
+        <name>BusinessProcess</name>
+    </types>
+    <types>
+        <members>CanonConnectCti</members>
+        <name>ApexPage</name>
+    </types>
+    <types>
+        <members>LeadConvertSettings</members>
+        <name>LeadConvertSettings</name>
+    </types>
+    <version>55.0</version>
+</Package>
