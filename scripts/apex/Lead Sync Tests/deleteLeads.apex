@@ -1,4 +1,4 @@
-Lead[] leads = [SELECT Id FROM Lead WHERE FirstName ='Lead'];
+Lead[] leads = [SELECT Id FROM Lead];
 delete leads;
 // Type t = Type.forName('LeadTriggerHandler');
 // TriggerFactory tf = (TriggerFactory) t.newInstance();

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <assignments>
+        <name>Set_Lead_Values</name>
+        <label>Set Lead Values</label>
+        <locationX>176</locationX>
+        <locationY>455</locationY>
+        <assignmentItems>
+            <assignToReference>Get_Lead.Last_Inbound_Text_Date_Time__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.CreatedDate</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Update_Lead</targetReference>
+        </connector>
+    </assignments>
+    <description>Automation for After a Text with a Lead
+1. Currently for when the lead sends a text to us, setting the last inbound text date.</description>
+    <environments>Default</environments>
+    <interviewLabel>Text After Insert Inbound Lead {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Text After Insert Inbound Lead</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <name>Get_Lead</name>
+        <label>Get Lead</label>
+        <locationX>176</locationX>
+        <locationY>335</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Set_Lead_Values</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.canon_app__Lead__c</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Lead</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Lead</name>
+        <label>Update Lead</label>
+        <locationX>176</locationX>
+        <locationY>575</locationY>
+        <inputReference>Get_Lead</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Lead</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>canon_app__Lead__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>canon_app__Direction__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Inbound</stringValue>
+            </value>
+        </filters>
+        <object>canon_app__Text_Message__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

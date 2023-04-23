@@ -1,0 +1,65 @@
+<!--
+  @description       : 
+  @author            : Jared Simpson
+  @group             : 
+  @last modified on  : 04-09-2023
+  @last modified by  : Jared Simpson
+-->
+<apex:page controller="ConnectPhoneController">
+  <style>
+    html, body, .openctiSoftPhone {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      border: none;
+      overflow: hidden;
+      position: fixed;
+      left: 0;
+    }
+  </style>
+  <apex:includeLightning />
+  
+    
+  <script type="text/javascript" src="/support/api/57.0/lightning/opencti_min.js"></script>
+  <apex:repeat value="{!settings}" var="customMetadataValue">
+    <script type="text/javascript">
+      var endpoint = "{!customMetadataValue.canon_app__Connect_Endpoint__c}";
+      function enableClickToDial() {
+          sforce.opencti.enableClickToDial();
+      }
+  
+      var listener = function(payload) {
+        var iframe = document.getElementsByName("sfdcSoftphone")[0];
+        iframe.contentWindow.postMessage(payload, endpoint);
+      };
+  
+      // Register the listener.
+      window.addEventListener('load', function() {
+        sforce.opencti.onClickToDial({listener: listener});
+      });
+    enableClickToDial();
+    </script>
+    <script>
+      var iframe = document.getElementsByName("sfdcSoftphone")[0];
+      iframe.onload = function() {
+          var doc = this.contentDocument || this.contentWindow.document;
+          var style = doc.createElement('style');
+          style.type = 'text/css';
+          style.innerHTML = 'html, body, .openctiSoftPhone { width: 100%; height: 100%; margin: 0; padding: 0; border: none; overflow: hidden; }';
+          doc.head.appendChild(style);
+      };
+    </script>
+
+    <iframe allow="camera *; geolocation *; microphone *; autoplay *; display-capture *" 
+    src="{!customMetadataValue.canon_app__Connect_Endpoint__c}" 
+    tabindex="0" name="sfdcSoftphone" width="100%" frameborder="0" 
+    title="Canon Connect CTI" height="100%" 
+    data-aura-rendered-by="516:0"
+    class="openctiSoftPhone"
+    data-aura-class="openctiSoftPhone"
+    >
+    </iframe>
+    
+  </apex:repeat>
+</apex:page>

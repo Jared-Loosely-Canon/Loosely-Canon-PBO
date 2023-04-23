@@ -30,6 +30,14 @@
                 <behavior>Edit</behavior>
                 <field>Attendence__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Start_Date_Time_Readable__c</field>
+            </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Start_Time_Readable__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>

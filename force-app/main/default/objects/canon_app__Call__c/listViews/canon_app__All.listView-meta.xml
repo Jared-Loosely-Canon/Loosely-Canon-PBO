@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>canon_app__All</fullName>
+    <columns>NAME</columns>
+    <columns>canon_app__Contact__c</columns>
+    <columns>canon_app__Lead__c</columns>
+    <columns>canon_app__Timestamp__c</columns>
+    <columns>canon_app__Direction__c</columns>
+    <columns>canon_app__Disposition__c</columns>
+    <columns>canon_app__Call_Status__c</columns>
+    <columns>canon_app__Duration__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

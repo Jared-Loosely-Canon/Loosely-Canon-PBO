@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Connect</label>
+    <protected>false</protected>
+    <values>
+        <field>canon_app__Cadence_Record_Owners__c</field>
+        <value xsi:type="xsd:string">Record Owner</value>
+    </values>
+    <values>
+        <field>canon_app__Cadence_Status_on_Lead_Conversion__c</field>
+        <value xsi:type="xsd:string">Canceled</value>
+    </values>
+    <values>
+        <field>canon_app__Connect_Endpoint__c</field>
+        <value xsi:type="xsd:string">https://682d-38-135-8-50.ngrok.io/</value>
+    </values>
+    <values>
+        <field>canon_app__Connect_Sync_Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>canon_app__Days_to_Sync__c</field>
+        <value xsi:type="xsd:double">5.0</value>
+    </values>
+    <values>
+        <field>canon_app__Email_Cadences_Enabled__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>canon_app__Minutes_to_Sync__c</field>
+        <value xsi:type="xsd:double">5.0</value>
+    </values>
+    <values>
+        <field>canon_app__Phone_Height_Pixels__c</field>
+        <value xsi:type="xsd:double">750.0</value>
+    </values>
+    <values>
+        <field>canon_app__Phone_Width_Pixels__c</field>
+        <value xsi:type="xsd:double">508.0</value>
+    </values>
+    <values>
+        <field>canon_app__Report_Folder__c</field>
+        <value xsi:type="xsd:string">00lDn000000qOn5IAE</value>
+    </values>
+    <values>
+        <field>canon_app__Sync_Time_Frame__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>canon_app__Sync_or_Async_Data_Feed__c</field>
+        <value xsi:type="xsd:string">Synchronous</value>
+    </values>
+    <values>
+        <field>canon_app__Task_Cadences_Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>canon_app__Text_Cadences_Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+</CustomMetadata>

@@ -1,0 +1,23 @@
+SELECT Id, Name, DeveloperName, NamespacePrefix, Description, BusinessProcessId, SobjectType, IsActive, IsPersonType FROM RecordType
+
+SELECT Id, Name, DeveloperName, RelatedId, Type, Email, QueueRoutingConfigId, OwnerId FROM Group
+
+
+Datetime sync = Datetime.now();
+SELECT Cadence__c, Cadence__r.Campaign__c, Cadence__r.Campaign__r.OwnerId, Cadence__r.OwnerId, Cadence__r.Contact__c, Cadence__r.Contact__r.OwnerId, Cadence__r.Account__r.OwnerId, Cadence__r.Account__c,
+            Cadence__r.Id, Cadence__r.Lead__c, Cadence__r.Lead__r.OwnerId, Cadence__r.Opportunity__c, Cadence__r.Opportunity__r.OwnerId, Lead__c, Lead__r.OwnerId, Contact__c, Contact__r.OwnerId,
+            Cadence__r.Status__c, Completed__c, Id, Sent__c, Scheduled_Date_Time__c, Text_Template__c, Time_to_Send__c, Text_Template__r.Id, 
+            Text_Template__r.Text_Message__c, OwnerId, Account__c, Account__r.OwnerId, Additional_Ids__c FROM Scheduled_Text__c 
+            WHERE Scheduled_Date_Time__c <= NOW AND Sent__c = false AND Completed__c = false 
+            AND 
+                ((Cadence__c != null AND Cadence__r.Status__c = 'In Progress' 
+                    AND (Cadence__r.Lead__r.Do_Not_Contact__c = false AND Cadence__r.Contact__r.Do_Not_Contact__c = false AND Cadence__r.Lead__r.Do_Not_Text__c = false 
+                    AND Cadence__r.Contact__r.Do_Not_Text__c = false
+                    AND (Cadence__r.Marketing_Cadence__c = False 
+                        OR (Cadence__r.Marketing_Cadence__c = true 
+                        AND (Cadence__r.Lead__r.Text_Marketing_Opt_In__c = true OR Cadence__r.Contact__r.Text_Marketing_Opt_In__c = true)))
+                    ))
+                OR  (Lead__c != null AND Lead__r.Do_Not_Contact__c = false AND Lead__r.Do_Not_Text__c = false) 
+                        OR (Contact__c != null AND Contact__r.Do_Not_Contact__c = false AND Contact__r.Do_Not_Text__c = false)
+                    )
+            ORDER BY Scheduled_Date_Time__c ASC
