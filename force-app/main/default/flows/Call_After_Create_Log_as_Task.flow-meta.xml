@@ -76,6 +76,13 @@
                 <elementReference>TaskDescription</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Task.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Create_Task</targetReference>
         </connector>
@@ -162,6 +169,13 @@
                 <elementReference>ExistTaskDescription</elementReference>
             </value>
         </assignmentItems>
+        <assignmentItems>
+            <assignToReference>Task.OwnerId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.OwnerId</elementReference>
+            </value>
+        </assignmentItems>
         <connector>
             <targetReference>Update_Task</targetReference>
         </connector>
@@ -201,7 +215,7 @@
     <formulas>
         <name>CreateDate</name>
         <dataType>Date</dataType>
-        <expression>DATEVALUE({!$Record.CreatedDate})</expression>
+        <expression>DATEVALUE({!$Record.canon_app__Timestamp__c})</expression>
     </formulas>
     <formulas>
         <name>ExistTaskDescription</name>
@@ -258,17 +272,10 @@
         </connector>
         <filterLogic>and</filterLogic>
         <filters>
-            <field>WhatId</field>
+            <field>CallObject</field>
             <operator>EqualTo</operator>
             <value>
                 <elementReference>$Record.Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>WhoId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>TargetId</elementReference>
             </value>
         </filters>
         <getFirstRecordOnly>true</getFirstRecordOnly>
