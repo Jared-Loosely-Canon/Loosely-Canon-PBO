@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>canon_app__Time_Zone__c</fullName>
+    <deprecated>false</deprecated>
+    <externalId>false</externalId>
+    <formula>IF(CASE(State, &apos;CA&apos;, 1, &apos;NV&apos;, 1,&apos;OR&apos;, 1, &apos;WA&apos;, 1, 0) &gt;=1, &quot;Pacific Standard Time&quot;, null)+ 
+IF(CASE(State, &apos;AZ&apos;, 1, &apos;CO&apos;, 1,&apos;ID&apos;, 1, &apos;MT&apos;, 1, &apos;NM&apos;, 1, &apos;UT&apos;, 1, &apos;WY&apos;, 1, 0) &gt;= 1, &quot;Mountain Standard Time&quot;, null)+ 
+IF(CASE(State, &apos;AL&apos;, 1, &apos;AR&apos;, 1, &apos;IL&apos;, 1, &apos;IA&apos;, 1,&apos;KS&apos;, 1, &apos;LA&apos;, 1,&apos;MN&apos;, 1,&apos;MS&apos;, 1,&apos;MO&apos;, 1,&apos;NE&apos;, 1,&apos;ND&apos;, 1, &apos;OK&apos;, 1,&apos;SD&apos;, 1,&apos;WI&apos;, 1, 0) &gt;= 1, &quot;Central Standard Time&quot;, null)+ 
+IF(CASE(State, &apos;CT&apos;, 1, &apos;DE&apos;, 1, &apos;GA&apos;, 1, &apos;ME&apos;, 1, &apos;MD&apos;, 1, &apos;MA&apos;, 1,&apos;MI&apos;, 1, &apos;NH&apos;, 1, &apos;NJ&apos;, 1, &apos;NY&apos;, 1, &apos;NC&apos;, 1, &apos;OH&apos;, 1, &apos;PA&apos;, 1, &apos;RI&apos;, 1, &apos;SC&apos;, 1, &apos;VT&apos;, 1, &apos;VA&apos;, 1, &apos;WV&apos;, 1, 0) &gt;= 1,&quot;Eastern Standard Time&quot;, null)+ 
+IF(CASE(State, &apos;AK&apos;, 1, 0) &gt;=1, &quot;Alaskan Standard Time&quot;, null)+ 
+IF(CASE(State, &apos;HI&apos;, 1, 0) &gt;=1, &quot;Hawaiian Standard Time&quot;, null)+ 
+IF(State = &apos;FL&apos;, IF(MID(Phone,2,3) = &quot;850&quot;,&quot;Central Standard Time&quot;,&quot;Eastern Standard Time&quot;),null)+ 
+IF(State = &apos;IN&apos;, IF(MID(Phone,2,3) = &quot;219&quot;,&quot;Central Standard Time&quot;,&quot;Eastern Standard Time&quot;),null)+ 
+IF(State = &apos;KY&apos;, IF(MID(Phone,2,3) = &quot;270&quot;,&quot;Central Standard Time&quot;,&quot;Eastern Standard Time&quot;),null)+ 
+IF(State = &apos;TX&apos;, IF(MID(Phone,2,3) = &quot;915&quot;,&quot;Mountain Standard Time&quot;,&quot;Central Standard Time&quot;),null)+ 
+IF(State = &apos;TN&apos;, IF(CASE(MID(Phone,2,3),&quot;865&quot;,1,&quot;423&quot;,1,0)&gt;=1,&quot;Eastern Standard Time&quot;, &quot;Central Standard Time&quot;),null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Time Zone</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

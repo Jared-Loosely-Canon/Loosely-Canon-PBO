@@ -15,11 +15,23 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Loosely Canon Website</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Phone</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Slack</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Text</fullName>
             <default>false</default>
         </values>
         <values>

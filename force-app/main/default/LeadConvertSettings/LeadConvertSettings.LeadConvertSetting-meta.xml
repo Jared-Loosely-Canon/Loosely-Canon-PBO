@@ -52,12 +52,12 @@
             <outputField>Last_Contacted_Date__c</outputField>
         </mappingFields>
         <mappingFields>
-            <inputField>Last_Inbound_Text_Date_Time__c</inputField>
-            <outputField>Last_Inbound_Text_Date_Time__c</outputField>
-        </mappingFields>
-        <mappingFields>
             <inputField>canon_app__Text_Marketing_Opt_In__c</inputField>
             <outputField>canon_app__Text_Marketing_Opt_In__c</outputField>
+        </mappingFields>
+        <mappingFields>
+            <inputField>Last_Inbound_Text_Date_Time__c</inputField>
+            <outputField>Last_Inbound_Text_Date_Time__c</outputField>
         </mappingFields>
         <outputObject>Contact</outputObject>
     </objectMapping>

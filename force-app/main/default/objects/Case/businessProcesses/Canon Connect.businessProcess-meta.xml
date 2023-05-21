@@ -4,7 +4,7 @@
     <isActive>true</isActive>
     <values>
         <fullName>Backlog</fullName>
-        <default>false</default>
+        <default>true</default>
     </values>
     <values>
         <fullName>Closed</fullName>
@@ -20,7 +20,7 @@
     </values>
     <values>
         <fullName>New</fullName>
-        <default>true</default>
+        <default>false</default>
     </values>
     <values>
         <fullName>On Hold</fullName>

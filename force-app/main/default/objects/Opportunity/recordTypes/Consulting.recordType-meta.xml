@@ -51,19 +51,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Public Relations</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Seminar - Internal</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Seminar - Partner</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Uplead</fullName>
             <default>false</default>
         </values>
         <values>
