@@ -36,6 +36,14 @@
         <type>Flexipage</type>
         <pageOrSobjectType>Contact</pageOrSobjectType>
     </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <content>Canon_Home</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>standard-home</pageOrSobjectType>
+    </actionOverrides>
     <brand>
         <headerColor>#7901FA</headerColor>
         <logo>lclogo2501</logo>
@@ -49,6 +57,7 @@
     <isNavTabPersistenceDisabled>true</isNavTabPersistenceDisabled>
     <label>Loosely Canon</label>
     <navType>Console</navType>
+    <tabs>standard-home</tabs>
     <tabs>standard-Account</tabs>
     <tabs>standard-Contact</tabs>
     <tabs>standard-Lead</tabs>
@@ -133,6 +142,9 @@
         <mappings>
             <fieldName>WhoId</fieldName>
             <tab>standard-Task</tab>
+        </mappings>
+        <mappings>
+            <tab>standard-home</tab>
         </mappings>
         <mappings>
             <tab>standard-report</tab>

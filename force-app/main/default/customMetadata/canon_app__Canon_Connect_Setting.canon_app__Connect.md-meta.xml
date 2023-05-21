@@ -12,10 +12,18 @@
     </values>
     <values>
         <field>canon_app__Connect_Endpoint__c</field>
-        <value xsi:type="xsd:string">https://682d-38-135-8-50.ngrok.io/</value>
+        <value xsi:type="xsd:string">https://app.canonconnect.io/</value>
     </values>
     <values>
         <field>canon_app__Connect_Sync_Enabled__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>canon_app__Create_Tasks_from_Calls__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>canon_app__Create_Tasks_from_Texts__c</field>
         <value xsi:type="xsd:boolean">true</value>
     </values>
     <values>

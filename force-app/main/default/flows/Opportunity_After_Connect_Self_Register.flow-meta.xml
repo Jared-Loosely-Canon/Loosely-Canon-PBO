@@ -53,7 +53,7 @@
         <inputParameters>
             <name>message</name>
             <value>
-                <stringValue>A new Lead has been created!</stringValue>
+                <stringValue>A new Opportunity has been created!</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
