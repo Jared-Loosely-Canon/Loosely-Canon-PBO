@@ -2,7 +2,7 @@
   @description       : 
   @author            : Jared Simpson
   @group             : 
-  @last modified on  : 04-09-2023
+  @last modified on  : 05-21-2023
   @last modified by  : Jared Simpson
 -->
 <apex:page controller="ConnectPhoneController">
@@ -30,9 +30,47 @@
       }
   
       var listener = function(payload) {
-        var iframe = document.getElementsByName("sfdcSoftphone")[0];
-        iframe.contentWindow.postMessage(payload, endpoint);
+         // Check if the Softphone panel is not visible.
+        sforce.opencti.isSoftphonePanelVisible({
+          callback: function(result) {
+            var iframe = document.getElementsByName("sfdcSoftphone")[0];
+            // If not visible, set its visibility to true.
+            if (!result.success) {
+            } else if (!result.returnValue.visible) {
+                sforce.opencti.setSoftphonePanelVisibility({visible: true});
+                iframe.contentWindow.postMessage(payload, endpoint);
+            }
+            else{
+              iframe.contentWindow.postMessage(payload, endpoint);
+            }
+          }
+        });
       };
+
+      window.addEventListener('message', function(event) {
+        var expectedOrigin = "{!customMetadataValue.canon_app__Connect_Endpoint__c}";
+        if(expectedOrigin.includes(event.origin) === false) {
+            return;
+        }
+        
+        var messageData = event.data;
+        if(messageData.open === true){
+          sforce.opencti.isSoftphonePanelVisible({
+            callback: function(result) {
+              if (!result.returnValue.visible) {
+                sforce.opencti.setSoftphonePanelVisibility({visible: true});
+              }
+            }
+          });
+        } else{
+          sforce.opencti.screenPop({
+              type: sforce.opencti.SCREENPOP_TYPE.SOBJECT,
+              params: { recordId: messageData.id } 
+          });
+        }
+        
+      }, false);
+
   
       // Register the listener.
       window.addEventListener('load', function() {
