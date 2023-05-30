@@ -3,30 +3,30 @@ import sys
 def setupFileName(filename):
     # remove folder name from filename
     filename = filename.split('/')[-1]
-    
+
     # remove file extension from filename
     filename = filename.split('.')[0]
-    
+
     return filename
 
 def setupFileNameCmdt(filename):
     # remove folder name from filename
     filename = filename.split('/')[-1]
-    
+
     # remove file extension from filename
     filename = ".".join(filename.split('.')[0:2])
     print(filename)
-    
+
     return filename
 
 def setupFileNameWithObjectName(filename):
     # remove folder name from filename
     objectName = filename.split('/')[-3]
     filename = filename.split('/')[-1]
-    
+
     # remove file extension from filename
     filename = filename.split('.')[0]
-    
+
     return objectName + '.' + filename
 
 def writeTypeToPackage(arr, type):
@@ -51,17 +51,26 @@ with open(pathToOutput + branchName+'.xml', 'w') as packageFile:
     # Write the XML header and opening tag
     packageFile.write('<?xml version="1.0" encoding="UTF-8" standalone="yes"?>\n')
     packageFile.write('<Package xmlns="http://soap.sforce.com/2006/04/metadata">\n')
-    
-    arrs = {'ApexClass': [], 'ApexTrigger': [], 'CustomField': [], 'Layout': [], 'Profile': [], 'RecordType': [], 'CustomPermission': [], 'Workflow': [],
-            'Flow': [], 'CustomObject': [], 'LightningComponentBundle': [], 'FlexiPage': [], 'ValidationRule': [], 'AssignmentRules': [],
-            'StandardValueSet': [], 'FieldSet': [], 'GlobalValueSet': [], 'PermissionSet': [], 'CompactLayout': [], 'Queue': [], 'QueueRoutingConfig': [],
-            'ReportType': [], 'CustomMetadata': [], 'BusinessProcess': [], 'ApexPage': [], 'LeadConvertSettings': [], 'CustomApplication': []}
+
+    arrs = {'ApexClass': [], 'ApexTrigger': [], 'CustomField': [],
+            'Layout': [],
+            'Profile': [], 'RecordType': [], 'CustomPermission': [],
+            'Workflow': [],
+            'Flow': [], 'CustomObject': [], 'LightningComponentBundle': [],
+            'FlexiPage': [], 'ValidationRule': [], 'AssignmentRules': [],
+            'StandardValueSet': [], 'FieldSet': [], 'GlobalValueSet': [],
+            'PermissionSet': [], 'CompactLayout': [], 'Queue': [],
+            'QueueRoutingConfig': [],
+            'ReportType': [], 'CustomMetadata': [], 'BusinessProcess': [],
+            'ApexPage': [], 'LeadConvertSettings': [], 'CustomApplication': [],
+            'ExternalCredential': [], 'NamedCredential': [],
+            'ConnectedApp': []}
 
     # Iterate over each line of input from stdin
     for file in filesToHandle:
         for filename in file:
             filename = filename.strip()
-            
+
             # Debugging output
             # print(f'Processing {filename}...')
 
@@ -147,11 +156,20 @@ with open(pathToOutput + branchName+'.xml', 'w') as packageFile:
             elif filename.endswith('.app-meta.xml'):
                 metadataType = 'CustomApplication'
                 arrs['CustomApplication'].append(setupFileName(filename))
+            elif filename.endswith('.externalCredential-meta.xml'):
+                metadataType = 'ExternalCredential'
+                arrs['ExternalCredential'].append(setupFileName(filename))
+            elif filename.endswith('.namedCredential-meta.xml'):
+                metadataType = 'NamedCredential'
+                arrs['NamedCredential'].append(setupFileName(filename))
+            elif filename.endswith('.connectedApp-meta.xml'):
+                metadataType = 'ConnectedApp'
+                arrs['ConnectedApp'].append(setupFileName(filename))
             else:
                 continue
 
     for k in arrs:
-        if(len(arrs[k]) != 0):
+        if (len(arrs[k]) != 0):
             packageFile.write(writeTypeToPackage(arrs[k], k))
 
     # Write the XML closing tag and version number

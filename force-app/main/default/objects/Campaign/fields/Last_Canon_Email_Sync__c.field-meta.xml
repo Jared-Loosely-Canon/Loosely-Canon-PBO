@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Last_Canon_Email_Sync__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to tell when the last successful sync occured</inlineHelpText>
+    <label>Last Canon Email Sync</label>
+    <required>false</required>
+    <type>DateTime</type>
+</CustomField>
