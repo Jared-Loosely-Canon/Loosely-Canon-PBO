@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>BatchCampaignMemberSync</members>
+        <members>BatchCampaignMemberSyncTest</members>
+        <members>CampaignMemberDetails</members>
+        <members>RestCampaignEmailButtonController</members>
+        <members>RestCampaignEmailButtonControllerTest</members>
+        <members>RestCampaignSyncController</members>
+        <members>RestCampaignSyncControllerTest</members>
+        <members>Utilities</members>
+        <members>WebCalloutHelper</members>
+        <members>WebCalloutHelperTest</members>
+        <name>ApexClass</name>
+    </types>
+    <types>
+        <members>Campaign.From_Email__c</members>
+        <members>Campaign.From_Id__c</members>
+        <members>Campaign.Last_Canon_Email_Sync__c</members>
+        <members>Campaign.Template_Id__c</members>
+        <members>Campaign.Template_Provider__c</members>
+        <members>Email_Campaign_Status__mdt.Has_Responded__c</members>
+        <members>Email_Campaign_Status__mdt.Is_Default__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Campaign-Campaign Layout</members>
+        <members>Email_Campaign_Status__mdt-Email Campaign Status Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Customer Portal Profile</members>
+        <members>Admin</members>
+        <members>Read Only</members>
+        <members>System Administrator %28non-API user%29</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Campaign_After_Insert_Create_Email_Statuses</members>
+        <members>Email_Message_Before_Update_First_Opened</members>
+        <name>Flow</name>
+    </types>
+    <types>
+        <members>Email_Campaign_Status__mdt</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>restCampaignEmailButton</members>
+        <members>restCampaignSyncButton</members>
+        <name>LightningComponentBundle</name>
+    </types>
+    <types>
+        <members>Campaign_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Email_Campaign_Status.Bounced</members>
+        <members>Email_Campaign_Status.Clicked</members>
+        <members>Email_Campaign_Status.Delivered</members>
+        <members>Email_Campaign_Status.Not_Sent</members>
+        <members>Email_Campaign_Status.Opened</members>
+        <members>Email_Campaign_Status.Queued</members>
+        <members>Email_Campaign_Status.Resubscribed</members>
+        <members>Email_Campaign_Status.Unsubscribed</members>
+        <name>CustomMetadata</name>
+    </types>
+    <types>
+        <members>Canon_Email</members>
+        <name>ExternalCredential</name>
+    </types>
+    <types>
+        <members>Canon_Email</members>
+        <name>NamedCredential</name>
+    </types>
+    <types>
+        <members>Canon_Email</members>
+        <name>ConnectedApp</name>
+    </types>
+    <version>55.0</version>
+</Package>
