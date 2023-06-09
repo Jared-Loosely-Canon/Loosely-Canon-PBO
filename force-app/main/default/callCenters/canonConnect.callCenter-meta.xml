@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CallCenter xmlns="http://soap.sforce.com/2006/04/metadata">
-    <adapterUrl>/apex/canon_app/CanonConnectCti</adapterUrl>
-    <customSettings>{&quot;reqTimeout&quot;:&quot;10000&quot;,&quot;reqStandbyUrl&quot;:&quot;/apex/canon_app/CanonConnectCti&quot;,&quot;reqSoftphoneHeight&quot;:&quot;800&quot;,&quot;reqUseApi&quot;:&quot;true&quot;,&quot;reqSoftphoneWidth&quot;:&quot;510&quot;,&quot;reqSalesforceCompatibilityMode&quot;:&quot;Classic_and_Lightning&quot;}</customSettings>
+    <adapterUrl>/apex/CanonConnectCti</adapterUrl>
+    <customSettings>{&quot;reqTimeout&quot;:&quot;10000&quot;,&quot;reqStandbyUrl&quot;:&quot;/apex/CanonConnectCti&quot;,&quot;reqSoftphoneHeight&quot;:&quot;800&quot;,&quot;reqUseApi&quot;:&quot;true&quot;,&quot;reqSoftphoneWidth&quot;:&quot;510&quot;,&quot;reqSalesforceCompatibilityMode&quot;:&quot;Classic_and_Lightning&quot;}</customSettings>
     <displayName>Canon Connect CTI</displayName>
     <displayNameLabel>Canon Connect</displayNameLabel>
     <internalNameLabel>CanonConnect</internalNameLabel>
@@ -9,12 +9,12 @@
         <items>
             <label>CTI Adapter URL</label>
             <name>reqAdapterUrl</name>
-            <value>/apex/canon_app/CanonConnectCti</value>
+            <value>/apex/CanonConnectCti</value>
         </items>
         <items>
             <label>CTI Adapter URL2</label>
             <name>reqStandbyUrl</name>
-            <value>/apex/canon_app/CanonConnectCti</value>
+            <value>/apex/CanonConnectCti</value>
         </items>
         <items>
             <label>Timeout</label>

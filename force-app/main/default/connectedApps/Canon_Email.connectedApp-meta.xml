@@ -4,7 +4,7 @@
     <label>Canon Email</label>
     <oauthConfig>
         <callbackUrl>https://email.canonconnect.io/oauth2/salesforce/callback</callbackUrl>
-        <consumerKey></consumerKey>
+        <consumerKey>3MVG9ux34Ig8G5eqBBxpLBZH5B4GkkjrcmQUCYsK_0FpLDE.27B7UHYuypDzSuqTuNngBb1VZN5.OwXseA39L</consumerKey>
         <isAdminApproved>false</isAdminApproved>
         <isConsumerSecretOptional>true</isConsumerSecretOptional>
         <isIntrospectAllTokens>false</isIntrospectAllTokens>

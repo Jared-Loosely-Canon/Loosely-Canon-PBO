@@ -11,6 +11,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Phone</fullName>
             <default>false</default>
         </values>
