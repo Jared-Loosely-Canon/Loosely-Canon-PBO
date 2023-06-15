@@ -42,6 +42,9 @@
     <columns>
         <field>HAS_RESPONDED</field>
     </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
     <format>Summary</format>
     <groupingsDown>
         <dateGranularity>Day</dateGranularity>
@@ -58,7 +61,7 @@
         <value>1</value>
     </params>
     <reportType>CampaignWithCampaignMembers</reportType>
-    <scope>userActive</scope>
+    <scope>organization</scope>
     <showDetails>true</showDetails>
     <showGrandTotal>true</showGrandTotal>
     <showSubTotals>true</showSubTotals>
