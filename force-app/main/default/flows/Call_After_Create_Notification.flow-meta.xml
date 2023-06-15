@@ -3,8 +3,8 @@
     <actionCalls>
         <name>Missed_Call_Notification</name>
         <label>Missed Call Notification</label>
-        <locationX>176</locationX>
-        <locationY>575</locationY>
+        <locationX>314</locationX>
+        <locationY>839</locationY>
         <actionName>customNotificationAction</actionName>
         <actionType>customNotificationAction</actionType>
         <flowTransactionModel>CurrentTransaction</flowTransactionModel>
@@ -15,9 +15,9 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>body</name>
+            <name>recipientIds</name>
             <value>
-                <stringValue>A call was missed</stringValue>
+                <elementReference>UsersIds</elementReference>
             </value>
         </inputParameters>
         <inputParameters>
@@ -27,24 +27,56 @@
             </value>
         </inputParameters>
         <inputParameters>
-            <name>recipientIds</name>
+            <name>body</name>
             <value>
-                <elementReference>UsersIds</elementReference>
+                <stringValue>A call was missed</stringValue>
             </value>
         </inputParameters>
         <inputParameters>
             <name>targetId</name>
             <value>
-                <elementReference>TargetId</elementReference>
+                <elementReference>LeadOrContactId</elementReference>
             </value>
         </inputParameters>
     </actionCalls>
     <apiVersion>56.0</apiVersion>
     <assignments>
+        <name>Set_to_Contact</name>
+        <label>Set to Contact</label>
+        <locationX>314</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>$Record.canon_app__Contact__c</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.canon_app__Contact__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Missed_Call_Notification</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>Set_to_Lead</name>
+        <label>Set to Lead</label>
+        <locationX>50</locationX>
+        <locationY>647</locationY>
+        <assignmentItems>
+            <assignToReference>LeadOrContactId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>$Record.canon_app__Lead__c</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>Missed_Call_Notification</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
         <name>Set_UserIds</name>
         <label>Set UserIds</label>
-        <locationX>176</locationX>
-        <locationY>455</locationY>
+        <locationX>314</locationX>
+        <locationY>431</locationY>
         <assignmentItems>
             <assignToReference>UsersIds</assignToReference>
             <operator>Add</operator>
@@ -53,9 +85,46 @@
             </value>
         </assignmentItems>
         <connector>
-            <targetReference>Missed_Call_Notification</targetReference>
+            <targetReference>Set_Lead_or_Contact_Id</targetReference>
         </connector>
     </assignments>
+    <decisions>
+        <name>Set_Lead_or_Contact_Id</name>
+        <label>Set Lead or Contact Id</label>
+        <locationX>314</locationX>
+        <locationY>539</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Lead</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.canon_app__Lead__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_to_Lead</targetReference>
+            </connector>
+            <label>Lead</label>
+        </rules>
+        <rules>
+            <name>Contact</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.canon_app__Contact__c</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <stringValue></stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Set_to_Contact</targetReference>
+            </connector>
+            <label>Contact</label>
+        </rules>
+    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>TargetId</name>
@@ -86,8 +155,8 @@
     <recordLookups>
         <name>Get_Notification</name>
         <label>Get Notification</label>
-        <locationX>176</locationX>
-        <locationY>335</locationY>
+        <locationX>314</locationX>
+        <locationY>323</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
             <targetReference>Set_UserIds</targetReference>
@@ -105,13 +174,13 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>50</locationX>
+        <locationX>188</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Get_Notification</targetReference>
         </connector>
         <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
-        <filterLogic>and</filterLogic>
+        <filterLogic>1 AND (2 OR 3)</filterLogic>
         <filters>
             <field>canon_app__Disposition__c</field>
             <operator>EqualTo</operator>
@@ -119,11 +188,32 @@
                 <stringValue>Missed Call</stringValue>
             </value>
         </filters>
+        <filters>
+            <field>canon_app__Contact__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>canon_app__Lead__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <stringValue></stringValue>
+            </value>
+        </filters>
         <object>canon_app__Call__c</object>
         <recordTriggerType>CreateAndUpdate</recordTriggerType>
         <triggerType>RecordAfterSave</triggerType>
     </start>
-    <status>Active</status>
+    <status>Obsolete</status>
+    <variables>
+        <name>LeadOrContactId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
     <variables>
         <name>User</name>
         <dataType>String</dataType>

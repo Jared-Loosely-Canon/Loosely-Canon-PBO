@@ -21,5 +21,14 @@
         <operation>equals</operation>
         <value>Uplead</value>
     </filters>
+    <filters>
+        <field>LEAD.STATUS</field>
+        <operation>equals</operation>
+        <value>Uncontacted</value>
+    </filters>
+    <filters>
+        <field>LEAD.COMPANY</field>
+        <operation>notEqual</operation>
+    </filters>
     <label>Open SF Consulting Leads</label>
 </ListView>

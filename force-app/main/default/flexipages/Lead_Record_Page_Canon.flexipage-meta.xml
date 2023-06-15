@@ -37,11 +37,6 @@
                 <identifier>force_relatedListQuickLinksContainer</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
-        <name>header</name>
-        <type>Region</type>
-    </flexiPageRegions>
-    <flexiPageRegions>
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
@@ -56,8 +51,7 @@
                 <identifier>runtime_sales_lead_pathAssistant</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
-        <name>subheader</name>
+        <name>header</name>
         <type>Region</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -109,6 +103,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Email</fieldItem>
                 <identifier>RecordEmailField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.LinkedIn__c</fieldItem>
+                <identifier>RecordLinkedIn_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-1ada6b28-4ae5-4a36-af55-36a075e87e01</name>
@@ -163,6 +167,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.MobilePhone</fieldItem>
                 <identifier>RecordMobilePhoneField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.canon_app__Time_Zone__c</fieldItem>
+                <identifier>Recordcanon_app_Time_Zone_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-809daa86-99ed-4328-8b0d-22b6739ba76e</name>
@@ -265,6 +279,16 @@
                 <identifier>RecordAnnualRevenueField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Lead_Account__c</fieldItem>
+                <identifier>RecordLead_Account_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-861aa2aa-22a4-47b6-9162-cef392123e3b</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -287,6 +311,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Industry</fieldItem>
                 <identifier>RecordIndustryField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.In_a_Campaign__c</fieldItem>
+                <identifier>RecordIn_a_Campaign_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-d073fe01-be88-4dfe-87b6-fa0c93263d96</name>
@@ -528,6 +562,10 @@
                     <value>Facet-da8ef975-ef92-4ed0-befa-7aa6af278584</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Lead Information</value>
                 </componentInstanceProperties>
@@ -540,6 +578,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-e9358cea-e4a7-4144-82fe-a64cf4af0ad2</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -556,6 +598,10 @@
                     <value>Facet-57e4dfb1-852b-4269-b05e-91073dd0ddd1</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Additional Information</value>
                 </componentInstanceProperties>
@@ -568,6 +614,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-42ab1bd9-4fc5-47e9-8587-653e723e3296</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -584,6 +634,10 @@
                     <value>Facet-e893ba03-3ba1-4e49-a362-583952852ee4</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>Activity Info</value>
                 </componentInstanceProperties>
@@ -596,6 +650,10 @@
                 <componentInstanceProperties>
                     <name>columns</name>
                     <value>Facet-7a08119e-e90e-4da7-97ab-c8607a9f91b8</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
                     <name>label</name>
@@ -612,6 +670,10 @@
                     <value>Facet-ec5c626b-1932-4097-80b2-ce59247e6f06</value>
                 </componentInstanceProperties>
                 <componentInstanceProperties>
+                    <name>horizontalAlignment</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
                     <name>label</name>
                     <value>System Information</value>
                 </componentInstanceProperties>
@@ -625,7 +687,6 @@
                 <identifier>force_recordDetailPanelMobile</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
         <name>detailTabContent</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -708,7 +769,6 @@
                 <identifier>flexipage_tab2</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
         <name>tabs</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -723,7 +783,6 @@
                 <identifier>flexipage_tabset</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
         <name>main</name>
         <type>Region</type>
     </flexiPageRegions>
@@ -738,7 +797,6 @@
                 <identifier>runtime_sales_activities_activityPanel2</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
         <name>relatedListTabContent</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -750,6 +808,32 @@
             </componentInstance>
         </itemInstances>
         <name>Facet-5dc8fb25-578d-40d1-861d-aa300b6883ac</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>numberOfTopicsToDisplay</name>
+                    <value>10</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>searchHint</name>
+                    <value>Type a topic name and press Enter.</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Topics</value>
+                </componentInstanceProperties>
+                <componentName>forceChatter:topicsOnRecordWrapper</componentName>
+                <identifier>forceChatter_topicsOnRecordWrapper</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-48ac7cee-d4ba-4abd-baab-ca580217f91b</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>Facet-6m80sofd8gn</name>
         <type>Facet</type>
     </flexiPageRegions>
     <flexiPageRegions>
@@ -785,7 +869,34 @@
                 <identifier>flexipage_tab3</identifier>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-48ac7cee-d4ba-4abd-baab-ca580217f91b</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Topics</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab4</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-6m80sofd8gn</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Scripts</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab5</identifier>
+            </componentInstance>
+        </itemInstances>
         <name>sidebartabs</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -798,24 +909,6 @@
                 </componentInstanceProperties>
                 <componentName>runtime_sales_merge:mergeCandidatesPreviewCard</componentName>
                 <identifier>runtime_sales_merge_mergeCandidatesPreviewCard</identifier>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentInstanceProperties>
-                    <name>numberOfTopicsToDisplay</name>
-                    <value>10</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>searchHint</name>
-                    <value>Type a topic name and press Enter.</value>
-                </componentInstanceProperties>
-                <componentInstanceProperties>
-                    <name>title</name>
-                    <value>Topics</value>
-                </componentInstanceProperties>
-                <componentName>forceChatter:topicsOnRecordWrapper</componentName>
-                <identifier>forceChatter_topicsOnRecordWrapper</identifier>
             </componentInstance>
         </itemInstances>
         <itemInstances>
@@ -835,15 +928,13 @@
                 </visibilityRule>
             </componentInstance>
         </itemInstances>
-        <mode>Replace</mode>
         <name>sidebar</name>
         <type>Region</type>
     </flexiPageRegions>
     <masterLabel>Lead Record Page Canon</masterLabel>
-    <parentFlexiPage>runtime_sales_lead__Lead_rec_L</parentFlexiPage>
     <sobjectType>Lead</sobjectType>
     <template>
-        <name>flexipage:recordHomeWithSubheaderTemplateDesktop</name>
+        <name>flexipage:recordHomeTemplateDesktop</name>
         <properties>
             <name>saveOptions</name>
             <value>[{&quot;name&quot;:&quot;UseDefaultAssignmentRule&quot;,&quot;value&quot;:&quot;SHOW_CHECKBOX_WITH_DEFAULT_OFF&quot;}]</value>
