@@ -5,11 +5,12 @@
     <columns>WHO_NAME</columns>
     <columns>WHAT_NAME</columns>
     <columns>Total_Minutes_Worked__c</columns>
+    <columns>DUE_DATE</columns>
     <filterScope>Mine</filterScope>
     <filters>
         <field>IS_CLOSED</field>
         <operation>equals</operation>
         <value>0</value>
     </filters>
-    <label>Open Tasks</label>
+    <label>My Open Tasks</label>
 </ListView>

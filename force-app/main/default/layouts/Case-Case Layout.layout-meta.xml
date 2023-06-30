@@ -307,6 +307,7 @@
         <fields>TASK.STATUS</fields>
         <fields>TASK.PRIORITY</fields>
         <fields>CORE.USERS.FULL_NAME</fields>
+        <fields>Total_Minutes_Worked__c</fields>
         <quickActions>Task.UpdateStatus</quickActions>
         <relatedList>RelatedActivityList</relatedList>
     </relatedLists>
@@ -317,6 +318,7 @@
         <fields>TASK.DUE_DATE</fields>
         <fields>CORE.USERS.FULL_NAME</fields>
         <fields>TASK.LAST_UPDATE</fields>
+        <fields>Total_Minutes_Worked__c</fields>
         <relatedList>RelatedHistoryList</relatedList>
     </relatedLists>
     <relatedLists>

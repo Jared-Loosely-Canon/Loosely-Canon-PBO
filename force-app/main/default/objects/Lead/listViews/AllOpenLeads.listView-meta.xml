@@ -13,7 +13,12 @@
     <filters>
         <field>LEAD.STATUS</field>
         <operation>notEqual</operation>
-        <value>Qualified,Unqualified</value>
+        <value>Engaging,Qualified,Unqualified</value>
+    </filters>
+    <filters>
+        <field>In_a_Campaign__c</field>
+        <operation>equals</operation>
+        <value>0</value>
     </filters>
     <label>All Open Leads</label>
 </ListView>
