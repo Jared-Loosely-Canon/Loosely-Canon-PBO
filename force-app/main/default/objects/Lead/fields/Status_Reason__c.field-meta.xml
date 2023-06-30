@@ -22,6 +22,11 @@
                 <default>false</default>
                 <label>Wrong Person</label>
             </value>
+            <value>
+                <fullName>Do Not Contact</fullName>
+                <default>false</default>
+                <label>Do Not Contact</label>
+            </value>
         </valueSetDefinition>
         <valueSettings>
             <controllingFieldValue>Unqualified</controllingFieldValue>
@@ -30,6 +35,10 @@
         <valueSettings>
             <controllingFieldValue>Unqualified</controllingFieldValue>
             <valueName>Wrong Person</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Unqualified</controllingFieldValue>
+            <valueName>Do Not Contact</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>
