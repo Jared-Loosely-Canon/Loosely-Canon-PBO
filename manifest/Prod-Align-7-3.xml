@@ -4,12 +4,5 @@
         <members>Account.Website_Text__c</members>
         <name>CustomField</name>
     </types>
-    <types>
-        <members>Admin</members>
-        <members>Customer Portal Profile</members>
-        <members>Read Only</members>
-        <members>System Administrator %28non-API user%29</members>
-        <name>Profile</name>
-    </types>
     <version>55.0</version>
 </Package>

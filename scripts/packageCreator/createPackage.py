@@ -64,7 +64,7 @@ with open(pathToOutput + branchName+'.xml', 'w') as packageFile:
             'ReportType': [], 'CustomMetadata': [], 'BusinessProcess': [],
             'ApexPage': [], 'LeadConvertSettings': [], 'CustomApplication': [],
             'ExternalCredential': [], 'NamedCredential': [],
-            'ConnectedApp': []}
+            'ConnectedApp': [], 'CustomTab': [], 'PathAssistant': []}
 
     # Iterate over each line of input from stdin
     for file in filesToHandle:
@@ -165,6 +165,12 @@ with open(pathToOutput + branchName+'.xml', 'w') as packageFile:
             elif filename.endswith('.connectedApp-meta.xml'):
                 metadataType = 'ConnectedApp'
                 arrs['ConnectedApp'].append(setupFileName(filename))
+            elif filename.endswith('.tab-meta.xml'):
+                metadataType = 'CustomTab'
+                arrs['CustomTab'].append(setupFileName(filename))
+            elif filename.endswith('.pathAssistant-meta.xml'):
+                metadataType = 'PathAssistant'
+                arrs['PathAssistant'].append(setupFileName(filename))
             else:
                 continue
 

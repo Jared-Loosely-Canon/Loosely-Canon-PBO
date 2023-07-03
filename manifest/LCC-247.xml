@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+    <types>
+        <members>Ticket__c.Issue_Type__c</members>
+        <members>Ticket__c.Opportunity__c</members>
+        <members>Ticket__c.Parent_Ticket__c</members>
+        <members>Ticket__c.Project_Id__c</members>
+        <members>Ticket__c.Stage__c</members>
+        <members>Ticket__c.Summary__c</members>
+        <members>Ticket__c.Ticket_Id__c</members>
+        <members>Ticket__c.Type__c</members>
+        <members>Ticket__c.Worked_Hours__c</members>
+        <members>Ticket__c.Worked_Minutes__c</members>
+        <members>Ticket__c.Worked_Seconds__c</members>
+        <name>CustomField</name>
+    </types>
+    <types>
+        <members>Ticket__c-Ticket Layout</members>
+        <name>Layout</name>
+    </types>
+    <types>
+        <members>Admin</members>
+        <members>Customer Portal Profile</members>
+        <members>Read Only</members>
+        <members>System Administrator %28non-API user%29</members>
+        <name>Profile</name>
+    </types>
+    <types>
+        <members>Ticket__c</members>
+        <name>CustomObject</name>
+    </types>
+    <types>
+        <members>Ticket_Record_Page</members>
+        <name>FlexiPage</name>
+    </types>
+    <types>
+        <members>Consulting_Tickets</members>
+        <name>Queue</name>
+    </types>
+    <types>
+        <members>Ticket__c</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
+        <members>Ticket</members>
+        <name>PathAssistant</name>
+    </types>
+    <version>55.0</version>
+</Package>
