@@ -55,6 +55,10 @@
                 <behavior>Edit</behavior>
                 <field>Parent_Ticket__c</field>
             </layoutItems>
+            <layoutItems>
+                <behavior>Edit</behavior>
+                <field>Sub_Stage__c</field>
+            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
