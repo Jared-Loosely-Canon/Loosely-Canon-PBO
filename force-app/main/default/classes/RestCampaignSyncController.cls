@@ -2,7 +2,7 @@
  * @description       : 
  * @author            : Jared Simpson
  * @group             : 
- * @last modified on  : 05-30-2023
+ * @last modified on  : 07-10-2023
  * @last modified by  : Jared Simpson
 **/
 public with sharing class RestCampaignSyncController {
@@ -19,7 +19,7 @@ public with sharing class RestCampaignSyncController {
     
             String jsonCampaignString = JSON.serialize(c);
     
-            WebCalloutHelper helper = new WebCalloutHelper('POST', jsonCampaignString, 'callout:Canon_Email/' + 'api/services/salesforce/campaign');
+            WebCalloutHelper helper = new WebCalloutHelper('POST', jsonCampaignString, 'callout:Connect_Login/' + 'api/services/salesforce/campaign');
             HTTPResponse res = helper.callout();
             
     

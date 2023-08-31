@@ -2,10 +2,10 @@
  * @description       : 
  * @author            : Jared Simpson
  * @group             : 
- * @last modified on  : 05-29-2023
+ * @last modified on  : 07-14-2023
  * @last modified by  : Jared Simpson
 **/
-public without sharing class BatchCampaignMemberSync implements Database.Batchable<sObject>, Database.AllowsCallouts {
+public with sharing class BatchCampaignMemberSync implements Database.Batchable<sObject>, Database.AllowsCallouts {
     public Id campaignId;
     public Boolean success = true;
 
@@ -53,7 +53,7 @@ public without sharing class BatchCampaignMemberSync implements Database.Batchab
 
         String data = JSON.serialize(cmds);
 
-        WebCalloutHelper helper = new WebCalloutHelper('POST', data, 'callout:Canon_Email/' + 'api/services/salesforce/campaign-member');
+        WebCalloutHelper helper = new WebCalloutHelper('POST', data, 'callout:Connect_Login/' + 'api/services/salesforce/campaign-member');
         HTTPResponse res = helper.callout();
 
         System.debug('Response: ' + res.getBody());
