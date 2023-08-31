@@ -2,10 +2,10 @@
  * @description       : 
  * @author            : Jared Simpson
  * @group             : 
- * @last modified on  : 07-10-2023
+ * @last modified on  : 07-14-2023
  * @last modified by  : Jared Simpson
 **/
-public without sharing class BatchCampaignMemberSync implements Database.Batchable<sObject>, Database.AllowsCallouts {
+public with sharing class BatchCampaignMemberSync implements Database.Batchable<sObject>, Database.AllowsCallouts {
     public Id campaignId;
     public Boolean success = true;
 
