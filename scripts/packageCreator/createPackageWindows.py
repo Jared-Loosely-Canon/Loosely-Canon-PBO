@@ -42,8 +42,8 @@ modifiedFiles = sys.argv[2]
 branchName = sys.argv[3]
 pathToOutput = './manifest/'
 
-filesToHandle = [newFiles.split('\n'), modifiedFiles.split('\n')]
-
+filesToHandle = [newFiles.split(' '), modifiedFiles.split(' ')]
+print(filesToHandle)
 # Open the package.xml file for writing
 
 with open(pathToOutput + branchName+'.xml', 'w') as packageFile:
