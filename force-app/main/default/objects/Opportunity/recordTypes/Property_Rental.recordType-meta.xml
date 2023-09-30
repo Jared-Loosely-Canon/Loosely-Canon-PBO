@@ -46,6 +46,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Loosely Canon Contact Form</fullName>
             <default>false</default>
         </values>
@@ -74,7 +78,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Uplead</fullName>
+            <fullName>UpLead</fullName>
             <default>false</default>
         </values>
         <values>

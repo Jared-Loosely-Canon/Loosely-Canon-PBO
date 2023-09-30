@@ -43,6 +43,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Other</fullName>
             <default>false</default>
         </values>
@@ -55,7 +59,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Uplead</fullName>
+            <fullName>UpLead</fullName>
             <default>false</default>
         </values>
         <values>

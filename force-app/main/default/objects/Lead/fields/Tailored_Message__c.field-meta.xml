@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tailored_Message__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to add a personal touch to automated communications. This can be used as the first paragraph in an email</inlineHelpText>
+    <label>Tailored Message</label>
+    <length>32768</length>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>LongTextArea</type>
+    <visibleLines>25</visibleLines>
+</CustomField>

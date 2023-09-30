@@ -20,15 +20,21 @@
         <converted>false</converted>
     </standardValue>
     <standardValue>
-        <fullName>Qualified</fullName>
+        <fullName>Pause</fullName>
         <default>false</default>
-        <label>Qualified</label>
-        <converted>true</converted>
+        <label>Pause</label>
+        <converted>false</converted>
     </standardValue>
     <standardValue>
         <fullName>Unqualified</fullName>
         <default>false</default>
         <label>Unqualified</label>
         <converted>false</converted>
+    </standardValue>
+    <standardValue>
+        <fullName>Qualified</fullName>
+        <default>false</default>
+        <label>Qualified</label>
+        <converted>true</converted>
     </standardValue>
 </StandardValueSet>

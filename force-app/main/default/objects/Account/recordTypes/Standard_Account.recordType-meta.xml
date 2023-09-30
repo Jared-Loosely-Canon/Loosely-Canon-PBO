@@ -18,6 +18,10 @@
             <default>false</default>
         </values>
         <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
             <fullName>Other</fullName>
             <default>false</default>
         </values>
@@ -30,7 +34,7 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Uplead</fullName>
+            <fullName>UpLead</fullName>
             <default>false</default>
         </values>
         <values>
@@ -158,6 +162,10 @@
         </values>
         <values>
             <fullName>Shipping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Staffing</fullName>
             <default>false</default>
         </values>
         <values>

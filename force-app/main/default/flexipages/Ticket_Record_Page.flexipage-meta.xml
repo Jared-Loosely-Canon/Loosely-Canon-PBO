@@ -86,6 +86,16 @@
                 <identifier>RecordType_cField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Owner__c</fieldItem>
+                <identifier>RecordOwner_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-bce4c0a3-e698-4fba-96f1-1df33c5c1c9c</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -128,6 +138,16 @@
                 </fieldInstanceProperties>
                 <fieldItem>Record.Stage__c</fieldItem>
                 <identifier>RecordStage_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Sub_Stage__c</fieldItem>
+                <identifier>RecordSub_Stage_cField</identifier>
             </fieldInstance>
         </itemInstances>
         <name>Facet-41972412-f93f-4827-ae76-e05288a16196</name>
@@ -282,6 +302,16 @@
                 <identifier>RecordLastModifiedByIdField</identifier>
             </fieldInstance>
         </itemInstances>
+        <itemInstances>
+            <fieldInstance>
+                <fieldInstanceProperties>
+                    <name>uiBehavior</name>
+                    <value>none</value>
+                </fieldInstanceProperties>
+                <fieldItem>Record.Closed_Date_Time__c</fieldItem>
+                <identifier>RecordClosed_Date_Time_cField</identifier>
+            </fieldInstance>
+        </itemInstances>
         <name>Facet-43e33a07-6a1f-439c-92a6-88183fbcfa06</name>
         <type>Facet</type>
     </flexiPageRegions>
@@ -390,6 +420,20 @@
         <itemInstances>
             <componentInstance>
                 <componentInstanceProperties>
+                    <name>hideHeader</name>
+                    <value>false</value>
+                </componentInstanceProperties>
+                <componentName>force:relatedListQuickLinksContainer</componentName>
+                <identifier>force_relatedListQuickLinksContainer2</identifier>
+            </componentInstance>
+        </itemInstances>
+        <name>Facet-d120bf5d-02d0-41ed-9aa6-46374c7f82a3</name>
+        <type>Facet</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
                     <name>active</name>
                     <value>true</value>
                 </componentInstanceProperties>
@@ -403,6 +447,20 @@
                 </componentInstanceProperties>
                 <componentName>flexipage:tab</componentName>
                 <identifier>detailTab</identifier>
+            </componentInstance>
+        </itemInstances>
+        <itemInstances>
+            <componentInstance>
+                <componentInstanceProperties>
+                    <name>body</name>
+                    <value>Facet-d120bf5d-02d0-41ed-9aa6-46374c7f82a3</value>
+                </componentInstanceProperties>
+                <componentInstanceProperties>
+                    <name>title</name>
+                    <value>Standard.Tab.relatedLists</value>
+                </componentInstanceProperties>
+                <componentName>flexipage:tab</componentName>
+                <identifier>flexipage_tab3</identifier>
             </componentInstance>
         </itemInstances>
         <mode>Replace</mode>

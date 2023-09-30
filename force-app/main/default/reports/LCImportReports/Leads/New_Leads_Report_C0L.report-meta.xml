@@ -8,14 +8,15 @@
             <axisBinding>y</axisBinding>
             <column>RowCount</column>
         </chartSummaries>
-        <chartType>HorizontalBar</chartType>
+        <chartType>Donut</chartType>
         <enableHoverLabels>false</enableHoverLabels>
         <expandOthers>true</expandOthers>
-        <groupingColumn>STATUS</groupingColumn>
+        <groupingColumn>INDUSTRY</groupingColumn>
+        <legendPosition>Right</legendPosition>
         <location>CHART_BOTTOM</location>
         <showAxisLabels>false</showAxisLabels>
         <showPercentage>false</showPercentage>
-        <showTotal>false</showTotal>
+        <showTotal>true</showTotal>
         <showValues>false</showValues>
         <size>Medium</size>
         <summaryAxisRange>Auto</summaryAxisRange>
@@ -34,22 +35,22 @@
         <field>TITLE</field>
     </columns>
     <columns>
-        <field>COMPANY</field>
-    </columns>
-    <columns>
         <field>EMAIL</field>
     </columns>
     <columns>
+        <field>Lead.LinkedIn__c</field>
+    </columns>
+    <columns>
+        <field>URL</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
         <field>LEAD_SOURCE</field>
-    </columns>
-    <columns>
-        <field>STREET</field>
-    </columns>
-    <columns>
-        <field>RATING</field>
-    </columns>
-    <columns>
-        <field>OWNER</field>
     </columns>
     <filter>
         <criteriaItems>
@@ -69,6 +70,11 @@
     <groupingsDown>
         <dateGranularity>Month</dateGranularity>
         <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>INDUSTRY</field>
         <sortOrder>Asc</sortOrder>
     </groupingsDown>
     <name>All Leads by Created Date and Status</name>

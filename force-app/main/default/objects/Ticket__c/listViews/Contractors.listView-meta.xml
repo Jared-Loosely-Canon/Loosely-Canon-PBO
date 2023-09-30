@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contractors</fullName>
+    <columns>Ticket_Id__c</columns>
+    <columns>NAME</columns>
+    <columns>Issue_Type__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Worked_Hours__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>Opportunity__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Type__c</field>
+        <operation>equals</operation>
+        <value>Contractor</value>
+    </filters>
+    <label>Contractors</label>
+</ListView>

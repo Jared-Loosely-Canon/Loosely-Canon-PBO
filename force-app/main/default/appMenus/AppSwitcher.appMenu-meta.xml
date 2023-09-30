@@ -188,4 +188,8 @@
         <name>Canon_Email</name>
         <type>ConnectedApp</type>
     </appMenuItems>
+    <appMenuItems>
+        <name>stripeGC__Setup</name>
+        <type>CustomApplication</type>
+    </appMenuItems>
 </AppMenu>
