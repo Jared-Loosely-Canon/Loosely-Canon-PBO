@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Start_Date_Format__c</fullName>
+    <description>Used to format the date to MM/DD/YYYY outside of the UI</description>
+    <externalId>false</externalId>
+    <formula>IF( ISBLANK(StartDate), &apos;&apos;, 
+TEXT(MONTH( StartDate )) + &quot;/&quot; + TEXT(DAY(StartDate )) + &quot;/&quot; + TEXT(YEAR(StartDate ))
+)</formula>
+    <inlineHelpText>Used to format the date to MM/DD/YYYY outside of the UI</inlineHelpText>
+    <label>Contract Start Date Format</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

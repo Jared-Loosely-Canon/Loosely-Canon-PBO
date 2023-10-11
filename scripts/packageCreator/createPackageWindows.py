@@ -59,11 +59,12 @@ with open(pathToOutput + branchName+'.xml', 'w') as packageFile:
             'FlexiPage': [], 'ValidationRule': [], 'AssignmentRules': [],
             'StandardValueSet': [], 'FieldSet': [], 'GlobalValueSet': [],
             'PermissionSet': [], 'CompactLayout': [], 'Queue': [],
-            'QueueRoutingConfig': [],
+            'QueueRoutingConfig': [], 'QuickAction': [],
             'ReportType': [], 'CustomMetadata': [], 'BusinessProcess': [],
             'ApexPage': [], 'LeadConvertSettings': [], 'CustomApplication': [],
-            'ExternalCredential': [], 'NamedCredential': [],
-            'ConnectedApp': [], 'CustomTab': [], 'PathAssistant': []}
+            'ExternalCredential': [], 'NamedCredential': [], 'ListView': [],
+            'ConnectedApp': [], 'CustomTab': [], 'PathAssistant': [],
+            'ApprovalProcess': []}
 
     # Iterate over each line of input from stdin
     for file in filesToHandle:
@@ -170,6 +171,15 @@ with open(pathToOutput + branchName+'.xml', 'w') as packageFile:
             elif filename.endswith('.pathAssistant-meta.xml'):
                 metadataType = 'PathAssistant'
                 arrs['PathAssistant'].append(setupFileName(filename))
+            elif filename.endswith('.approvalProcess-meta.xml'):
+                metadataType = 'ApprovalProcess'
+                arrs['ApprovalProcess'].append(setupFileNameWithObjectName(filename))
+            elif filename.endswith('.listView-meta.xml'):
+                metadataType = 'ListView'
+                arrs['ListView'].append(setupFileNameWithObjectName(filename))
+            elif filename.endswith('.quickAction-meta.xml'):
+                metadataType = 'QuickAction'
+                arrs['QuickAction'].append(setupFileNameWithObjectName(filename))
             else:
                 continue
 
