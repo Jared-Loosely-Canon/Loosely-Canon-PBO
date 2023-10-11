@@ -283,6 +283,17 @@
         <relatedList>RelatedLineItemList</relatedList>
     </relatedLists>
     <relatedLists>
+        <fields>CONTRACT.CONTRACT_NUMBER</fields>
+        <fields>CONTRACT.NAME</fields>
+        <fields>SALES.ACCOUNT.NAME</fields>
+        <fields>CONTRACT.STATUS</fields>
+        <relatedList>Contract.Opportunity__c</relatedList>
+    </relatedLists>
+    <relatedLists>
+        <fields>NAME</fields>
+        <relatedList>Ticket__c.Opportunity__c</relatedList>
+    </relatedLists>
+    <relatedLists>
         <relatedList>RelatedFileList</relatedList>
     </relatedLists>
     <relatedLists>

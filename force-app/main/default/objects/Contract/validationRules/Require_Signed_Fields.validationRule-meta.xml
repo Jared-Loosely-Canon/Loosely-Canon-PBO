@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Signed_Fields</fullName>
+    <active>true</active>
+    <description>When a Contract is Activated, Signed Fields should be Populated</description>
+    <errorConditionFormula>TEXT(Status) == &apos;Activated&apos;
+&amp;&amp;
+(ISBLANK(CustomerSignedId) 
+|| ISBLANK(  CustomerSignedDate ) 
+|| ISBLANK( CompanySignedId ) 
+|| ISBLANK( CompanySignedDate ) 
+)</errorConditionFormula>
+    <errorDisplayField>CustomerSignedId</errorDisplayField>
+    <errorMessage>All Signed by Fields must be populated to Activate</errorMessage>
+</ValidationRule>

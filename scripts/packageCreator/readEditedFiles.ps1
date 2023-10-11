@@ -8,4 +8,4 @@ $modifiedFiles = git ls-files -m
 $branch = git rev-parse --abbrev-ref HEAD
 
 # Pass the two outputs as arguments to the Python script
-python scripts/packageCreator/createPackage.py "$newFiles" "$modifiedFiles" "$branch"
+python scripts/packageCreator/createPackageWindows.py "$newFiles" "$modifiedFiles" "$branch"
