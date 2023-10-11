@@ -90,6 +90,10 @@
             <fullName>Word of mouth</fullName>
             <default>false</default>
         </values>
+        <values>
+            <fullName>YouTube</fullName>
+            <default>false</default>
+        </values>
     </picklistValues>
     <picklistValues>
         <picklist>Type</picklist>
