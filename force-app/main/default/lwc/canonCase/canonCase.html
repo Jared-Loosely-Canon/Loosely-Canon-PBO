@@ -1,0 +1,39 @@
+<!-- myTaskForm.html -->
+<template>
+    <div class="slds-box slds-theme_default slds-align_absolute-center" style="width: 80%;">
+        <div class="slds-form slds-form_stacked">
+            <div class="slds-form-element">
+                <label for="subject" class="slds-form-element__label">Subject</label>
+                <input type="text" id="subject" name="subject" value={subject} oninput={handleSubjectChange} class="slds-input" required/>
+            </div>
+
+            <div class="slds-form-element">
+                <label for="priority" class="slds-form-element__label">Priority</label>
+                <div class="slds-select_container">
+                    <select id="priority" name="priority" value={priority} onchange={handlePriorityChange} class="slds-select" required>
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="slds-form-element">
+                <label for="description" class="slds-form-element__label">Description</label>
+                <textarea id="description" name="description" value={description} oninput={handleDescriptionChange} class="slds-textarea" required></textarea>
+            </div>
+
+            <div class="slds-form-element">
+                <label for="url" class="slds-form-element__label">URL</label>
+                <input type="url" id="url" name="url" value={url} oninput={handleUrlChange} class="slds-input" required />
+            </div>
+
+            <div class="slds-form-element slds-align_absolute-center">
+                <lightning-button label="Add Current URL" title="Add Current URL" onclick={handleAddCurrentURL} class="slds-button"></lightning-button>
+            </div>
+            <div class="slds-form-element slds-align_absolute-center">
+                <lightning-button label="Submit Case" title="Submit Case" onclick={handleSubmit} class="slds-button"></lightning-button>
+            </div>
+        </div>
+    </div>
+</template>
